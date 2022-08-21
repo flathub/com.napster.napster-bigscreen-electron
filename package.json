@@ -1,0 +1,42 @@
+{
+  "name": "napster-bigscreen-electron",
+  "appId": "com.napster.${name}",
+  "productName": "Napster Bigscreen Electron",
+  "version": "1.0.0",
+  "description": "A Linux desktop web app for Napster Bigscreen",
+  "main": "scripts/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --publish never",
+    "build:flatpak": "flatpak-builder --force-clean --disable-cache ./flatpak com.napster.napster-bigscreen-electron.yaml",
+    "install:flatpak": "flatpak-builder --install --user --force-clean --disable-cache ./flatpak com.napster.napster-bigscreen-electron.yaml"
+  },
+  "build": {
+    "asar": false,
+    "linux": {
+      "target": [
+        "zip",
+        "AppImage"
+      ],
+      "category": "Music",
+      "artifactName": "${name}_${version}_linux.${ext}"
+    },
+    "extraFiles": [
+      "com.napster.${name}.desktop"
+    ]
+  },
+  "repository": "https://github.com/flathub/com.napster.napster-bigscreen-electron",
+  "keywords": [
+    "electron",
+    "napster",
+    "napster-bigscreen",
+    "napster-bigscreen-electron"
+  ],
+  "author": "Napster Bigscreen <bigscreendev@napster.com>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "^18.3.2",
+    "electron-builder": "^22.14.13",
+    "prettier": "2.5.1"
+  }
+}

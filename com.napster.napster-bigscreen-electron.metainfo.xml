@@ -7,21 +7,57 @@
   <developer_name>Napster</developer_name>
   <summary>Napster for your handheld</summary>
   <metadata_license>CC0-1.0</metadata_license>
-  <url type="homepage">https://github.com/Napster/napster-bigscreen-electron</url>
-  <url type="help">https://help.napster.com/hc/</url>
-  <url type="bugtracker">https://github.com/Napster/napster-bigscreen-electron/issues</url>
+  <url type="homepage">https://github.com/flathub/com.napster.napster-bigscreen-electron</url>
+  <url type="help">https://github.com/flathub/com.napster.napster-bigscreen-electron/issues</url>
+  <url type="bugtracker">https://github.com/flathub/com.napster.napster-bigscreen-electron/issues</url>
   <description>
     <p>Official Napster client for your handheld</p>
   </description>
   <screenshots>
     <screenshot type="default">
-      <image type="source">https://raw.githubusercontent.com/napster/napster-bigscreen-electron/development/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/flathub/com.napster.napster-bigscreen-electron/master/screenshot1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/com.napster.napster-bigscreen-electron/master/screenshot2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/com.napster.napster-bigscreen-electron/master/screenshot3.png</image>
     </screenshot>
   </screenshots>
   <releases>
     <release version="1.0.0" date="2022-08-17">
       <description>
-        <p>Release Candidate</p>
+        <p>Napster is the streaming app where music is more than sound.</p>
+        <p>Alongside 110+ million songs, Napster is home to hundreds of thousands of official music videos. Whether you're streaming on demand or listening offline, enjoy all content ad-free.</p>
+        <p>Deep-dive into playlists and mixes prepared just for you. Listen in Lossless audio to hear precisely what the artist intended, or try Dolby Atmos immersive sound to hear every detail with unparalleled clarity and depth.</p>
+        <p>
+          Napster features:
+          <ul>
+          <li>Discover new music, artists, and official music videos</li>
+          <li>Search for your favorite songs, artists, albums, or videos</li>
+          <li>Explore playlists and mixes made just for you</li>
+          <li>Browse by genre or mood to discover new music</li>
+          </ul>
+        </p>
+        <p>
+          Privacy policy: https://napster.com/privacy
+          <br>
+          Terms of use: https://napster.com/terms
+        </p>
+        <p>
+          Please note:
+        <br>
+          Catalog availability may vary by country or region
+        </p>
+        <p>
+          Connect with us
+          <ul>
+          <li>https://napster.com</li>
+          <li>https://www.instagram.com/napster</li>
+          <li>https://twitter.com/napster</li>
+          <li>https://www.facebook.com/napster/</li>
+          </ul>
+        </p>
       </description>
     </release>
   </releases>

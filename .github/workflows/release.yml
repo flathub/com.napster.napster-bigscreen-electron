@@ -1,0 +1,68 @@
+name: napster-bigscreen-electron-release
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches:
+      - development
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: manjarolinux/base:latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16.15.0"
+
+      - name: Define Node Version
+        run: echo "node_version=$(node --version)" >> $GITHUB_ENV
+
+      - name: Define NPM Version
+        run: echo "npm_version=$(npm --version)" >> $GITHUB_ENV
+
+      - name: Cache Node Modules
+        id: node-cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            ~/.cache/Cypress
+          key: ${{ runner.os }}-${{ env.node_version }}-${{ env.npm_version }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Node Modules
+        if: steps.node-cache.outputs.cache-hit != 'true'
+        run: npm install
+
+      - name: Install Flatpak
+        run: pacman -Sy --noconfirm flatpak
+
+      - name: Install Flatpak-Builder
+        run: pacman -Sy --noconfirm flatpak-builder
+
+      - name: Setup Flatpak-Builder - Add Repo
+        run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
+
+      - name: Setup Flatpak-Builter - Install SDK
+        run: flatpak install --noninteractive flathub org.freedesktop.Sdk//21.08
+
+      - name: Setup Flatpak-Builter - Install Platform
+        run: flatpak install --noninteractive flathub org.freedesktop.Platform//21.08
+
+      - name: Setup Flatpak-Builter - Install Electron2.BaseApp
+        run: flatpak install --noninteractive flathub org.electronjs.Electron2.BaseApp//21.08
+
+      - name: Install Flatpak
+        run: DEBUG=electron-builder npm run install:flatpak
+
+      - name: Check Flatpak installation
+        run: flatpak info com.napster.napster-bigscreen-electron
+
+      - name: Upload Electron build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Electron
+          path: dist/napster-bigscreen-electron-*.*
