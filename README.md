@@ -23,8 +23,8 @@ Find the assets for your library here:
 
 ## Pre-requisites
 
-- `nmp` & `node`, see `.nvmrc` file
-- Flatpak installed on your local machine
+- `nmp` & `node` for building only the electron app, see `.nvmrc` file
+- Flatpak installed on your local machine to build the flatpak
 - `org.freedesktop.Platform` flatpak
 - `org.freedesktop.Sdk` flatpak
 - `org.electronjs.Electron2.BaseApp` flatpak
@@ -37,11 +37,17 @@ Once you have npm, clone the wrapper to a convenient location:
 git clone https://github.com/flathub/com.napster.napster-bigscreen-electron.git
 ```
 
-## Building
+## Building Flatpak
+
+```bash
+npm run build:flatpak
+```
+
+## Building Electron
 
 ```bash
 npm install
-npm run build:flatpak
+npm run build
 ```
 
 # Links
