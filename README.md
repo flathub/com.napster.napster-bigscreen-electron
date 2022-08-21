@@ -50,6 +50,11 @@ npm install
 npm run build
 ```
 
+## TO-DO
+
+1. Use flatpak's node package to build the app in-place (and support multi-platform builds)
+1. Automation to automatically update the version on github's releases
+
 # Links
 
 - [Napster Official website](https://www.napster.com/)
