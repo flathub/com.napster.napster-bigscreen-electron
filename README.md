@@ -25,7 +25,7 @@ Find the assets for your library here:
 
 - A machine running Arch/Ubuntu on a `x86_64` achitecture (VMs/docker should work)
 - `nmp` & `node` for building only the electron app, see `.nvmrc` file
-- Flatpak installed on your local machine as well as the `flatpak-builder` package from apt/dnf/pamac
+- `flatpak` installed on your local machine as well as the `flatpak-builder` package from apt/dnf/pamac
 - `org.freedesktop.Platform` flatpak
 - `org.freedesktop.Sdk` flatpak
 - `org.electronjs.Electron2.BaseApp` flatpak
@@ -45,7 +45,7 @@ npm install
 npm run build
 ```
 
-The package should be inside the `<project-roo>/dist`; If built on mac, generates a `dmg` as well as `.app` file; Linux gets electron binary as well as AppImage
+The package should be inside the `<project-root>/dist`; If built on mac, generates a `dmg` as well as `.app` files; Linux gets electron zip as well as AppImage
 
 ## Building Flatpak Only
 
@@ -77,7 +77,7 @@ sources:
 
 ## Testing
 
-Use a gamepad! It's intended to be used with gamepads, however, up/down/left/right/enter/backspace can be used for navigation as well as touch-screen/mouse. Note that you cannot input text with your keyboard on text fields as you'll need to use the virtual on-screen keyboard; This is so we can have a cross-platform app.
+Use a gamepad! It's intended to be used with gamepads, however, up/down/left/right/enter/backspace can be used for navigation as well as touch-screen/mouse. Note that you cannot input text with your keyboard on text fields as you'll need to use the virtual on-screen keyboard ([Issue #1](https://github.com/flathub/com.napster.napster-bigscreen-electron/issues/1)); This is so we can have a cross-platform app.
 
 Set your window to 1280x800 to simulate Steamdeck's aspect ratio and resolution.
 
@@ -98,7 +98,7 @@ Until we solve the below to-dos:
 ## Pending Tasks
 
 1. Use flatpak's node package to build the app in-place (and support multi-platform builds)
-1. Automation to automatically update the version on github's releases
+1. Automation to update the version on github's releases
 
 # Links
 
