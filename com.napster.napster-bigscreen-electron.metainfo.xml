@@ -11,7 +11,9 @@
   <url type="help">https://github.com/flathub/com.napster.napster-bigscreen-electron/issues</url>
   <url type="bugtracker">https://github.com/flathub/com.napster.napster-bigscreen-electron/issues</url>
   <description>
-    <p>Official Napster client for your handheld</p>
+    <p>Napster is the streaming app where music is more than sound.</p>
+    <p>Alongside 110+ million songs, Napster is home to hundreds of thousands of official music videos. Whether you're streaming on demand or listening offline, enjoy all content ad-free.</p>
+    <p>Deep-dive into playlists and mixes prepared just for you. Listen in Lossless audio to hear precisely what the artist intended, or try Dolby Atmos immersive sound to hear every detail with unparalleled clarity and depth.</p>
   </description>
   <screenshots>
     <screenshot type="default">
@@ -27,9 +29,7 @@
   <releases>
     <release version="1.0.0" date="2022-08-17">
       <description>
-        <p>Napster is the streaming app where music is more than sound.</p>
-        <p>Alongside 110+ million songs, Napster is home to hundreds of thousands of official music videos. Whether you're streaming on demand or listening offline, enjoy all content ad-free.</p>
-        <p>Deep-dive into playlists and mixes prepared just for you. Listen in Lossless audio to hear precisely what the artist intended, or try Dolby Atmos immersive sound to hear every detail with unparalleled clarity and depth.</p>
+        <p>Initial release.</p>
       </description>
     </release>
   </releases>
